@@ -12,6 +12,7 @@ export interface MenuChannel {
   title: string;
   subtitle: string;
   icon: ChannelIconName;
+  slot: number;
   featured?: boolean;
   disabled?: boolean;
   image?: {

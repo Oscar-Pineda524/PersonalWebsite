@@ -32,9 +32,9 @@ export const metadata: Metadata = {
       "Explore Oscar's projects, experience, and technical problem-solving.",
     images: [
       {
-        url: "/og.png",
-        width: 1536,
-        height: 1024,
+        url: "/og-v2.png",
+        width: 1619,
+        height: 972,
         alt: "Oscar Computer Science Portfolio channel menu",
       },
     ],
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Oscar | Computer Science Portfolio",
     description:
       "Explore Oscar's projects, experience, and technical problem-solving.",
-    images: ["/og.png"],
+    images: ["/og-v2.png"],
   },
 };
 

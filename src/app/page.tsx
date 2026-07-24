@@ -49,23 +49,9 @@ export default function HomePage() {
         <PortfolioHeader
           name={siteContent.name}
           title={siteContent.title}
-          onProfileSelect={() =>
-            setActivePanel({
-              title: `${siteContent.name}'s Profile`,
-              subtitle: siteContent.introduction,
-            })
-          }
         />
 
         <div className="portfolio-main" id="main-menu">
-          <div className="portfolio-main__intro">
-            <div>
-              <p className="ds-eyebrow">Select a channel</p>
-              <h2>What would you like to explore?</h2>
-            </div>
-            <p>{siteContent.introduction}</p>
-          </div>
-
           <ChannelPanel
             title={activePanel?.title}
             subtitle={activePanel?.subtitle}
@@ -74,14 +60,21 @@ export default function HomePage() {
 
           <MenuGrid
             channels={menuChannels}
+            label={siteContent.menuLabel}
             selectedChannel={activePanel?.slug}
             onSelect={openChannel}
           />
         </div>
 
         <BottomNavigation
+          name={siteContent.name}
           onMenuSelect={returnToMenu}
-          onResumeSelect={() => openChannelBySlug("resume")}
+          onProfileSelect={() =>
+            setActivePanel({
+              title: `${siteContent.name}'s Profile`,
+              subtitle: siteContent.introduction,
+            })
+          }
           onContactSelect={() => openChannelBySlug("contact")}
         />
       </div>

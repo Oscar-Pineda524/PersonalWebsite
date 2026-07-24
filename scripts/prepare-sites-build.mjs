@@ -49,7 +49,7 @@ function withMetadataOrigin(response, request) {
   return new HTMLRewriter()
     .on(metadataSelector, {
       element(element) {
-        element.setAttribute("content", \`\${origin}/og.png\`);
+        element.setAttribute("content", \`\${origin}/og-v2.png\`);
       },
     })
     .transform(response);

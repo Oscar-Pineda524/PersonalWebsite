@@ -1,46 +1,53 @@
 "use client";
 
-import { FileText, Home, Mail } from "lucide-react";
+import { Grid2X2, Mail } from "lucide-react";
+
+import { ProfileButton } from "@/components/menu/profile-button";
+import { StatusClock } from "@/components/menu/status-clock";
 
 interface BottomNavigationProps {
+  name: string;
   onMenuSelect: () => void;
-  onResumeSelect: () => void;
+  onProfileSelect: () => void;
   onContactSelect: () => void;
 }
 
 export function BottomNavigation({
+  name,
   onMenuSelect,
-  onResumeSelect,
+  onProfileSelect,
   onContactSelect,
 }: BottomNavigationProps) {
   return (
     <nav className="bottom-navigation" aria-label="Quick navigation">
-      <button
-        type="button"
-        className="bottom-navigation__control"
-        onClick={onResumeSelect}
-      >
-        <FileText aria-hidden="true" />
-        <span>Resume</span>
-      </button>
+      <div className="bottom-navigation__side bottom-navigation__side--left">
+        <ProfileButton name={name} onSelect={onProfileSelect} />
+        <span>Profile</span>
+      </div>
 
-      <button
-        type="button"
-        className="bottom-navigation__home"
-        aria-label="Return to channel menu"
-        onClick={onMenuSelect}
-      >
-        <Home aria-hidden="true" />
-      </button>
+      <div className="bottom-navigation__center">
+        <button
+          type="button"
+          className="bottom-navigation__home"
+          aria-label="Return to channel menu"
+          onClick={onMenuSelect}
+        >
+          <Grid2X2 aria-hidden="true" />
+        </button>
+        <StatusClock />
+      </div>
 
-      <button
-        type="button"
-        className="bottom-navigation__control"
-        onClick={onContactSelect}
-      >
-        <Mail aria-hidden="true" />
+      <div className="bottom-navigation__side bottom-navigation__side--right">
+        <button
+          type="button"
+          className="bottom-navigation__contact"
+          aria-label="Open Contact channel"
+          onClick={onContactSelect}
+        >
+          <Mail aria-hidden="true" />
+        </button>
         <span>Contact</span>
-      </button>
+      </div>
     </nav>
   );
 }
