@@ -14,12 +14,38 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Portfolio",
-    template: "%s | Portfolio",
+    default: "Oscar | Computer Science Portfolio",
+    template: "%s | Oscar",
   },
-  description: "Computer science portfolio featuring projects and experience.",
+  description:
+    "Oscar's computer science portfolio featuring projects, experience, and technical problem-solving.",
+  openGraph: {
+    type: "website",
+    title: "Oscar | Computer Science Portfolio",
+    description:
+      "Explore Oscar's projects, experience, and technical problem-solving.",
+    images: [
+      {
+        url: "/og.png",
+        width: 1536,
+        height: 1024,
+        alt: "Oscar Computer Science Portfolio channel menu",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Oscar | Computer Science Portfolio",
+    description:
+      "Explore Oscar's projects, experience, and technical problem-solving.",
+    images: ["/og.png"],
+  },
 };
 
 type RootLayoutProps = Readonly<{
