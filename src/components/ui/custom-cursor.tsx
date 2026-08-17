@@ -13,32 +13,51 @@ type CursorAsset = Readonly<{
 }>;
 
 /** Adjust this value to change the interval between animation frames. */
-export const CURSOR_FRAME_DURATION_MS = 40;
+export const CURSOR_FRAME_DURATION_MS = 7;
 
 /**
- * Cursor display size and hotspot, measured in rendered CSS pixels.
- * All differently sized frames are centered inside this fixed canvas.
+ * Cursor display size and hotspot, measured in rendered CSS pixels. The SVG
+ * exports have a shared width but different heights, so every frame is scaled
+ * uniformly and centered inside one fixed canvas.
  */
-export const CURSOR_DISPLAY_WIDTH_PX = 34;
-const SOURCE_WIDTH_PX = 67;
-const MAX_SOURCE_HEIGHT_PX = 107;
+export const CURSOR_SCALE = 0.28;
+const SOURCE_WIDTH_PX = 85;
+const MAX_SOURCE_HEIGHT_PX = 126;
+export const CURSOR_DISPLAY_WIDTH_PX = SOURCE_WIDTH_PX * CURSOR_SCALE;
 export const CURSOR_DISPLAY_HEIGHT_PX =
-  (MAX_SOURCE_HEIGHT_PX / SOURCE_WIDTH_PX) * CURSOR_DISPLAY_WIDTH_PX;
+  MAX_SOURCE_HEIGHT_PX * CURSOR_SCALE;
 export const CURSOR_HOTSPOT = {
   x: CURSOR_DISPLAY_WIDTH_PX / 2,
   y: CURSOR_DISPLAY_HEIGHT_PX / 2,
 } as const;
 
 const CURSOR_ASSETS: readonly CursorAsset[] = [
-  { frame: 1, height: 107, src: "/assets/cursors/cursor-01.png" },
-  { frame: 2, height: 107, src: "/assets/cursors/cursor-02.png" },
-  { frame: 3, height: 107, src: "/assets/cursors/cursor-03.png" },
-  { frame: 4, height: 107, src: "/assets/cursors/cursor-04.png" },
-  { frame: 5, height: 107, src: "/assets/cursors/cursor-05.png" },
+  {
+    frame: 1,
+    height: 126,
+    src: "/assets/cursors/Wii Cursor - 1 Frame.svg",
+  },
+  {
+    frame: 2,
+    height: 119,
+    src: "/assets/cursors/Wii Cursor - 2 Frame.svg",
+  },
+  {
+    frame: 3,
+    height: 112,
+    src: "/assets/cursors/Wii Cursor - 3 Frame.svg",
+  },
+  {
+    frame: 4,
+    height: 112,
+    src: "/assets/cursors/Wii Cursor - 4 Frame.svg",
+  },
+  {
+    frame: 5,
+    height: 112,
+    src: "/assets/cursors/Wii Cursor - 5 Frame.svg",
+  },
 ] as const;
-
-const renderHeight = (sourceHeight: number) =>
-  (sourceHeight / SOURCE_WIDTH_PX) * CURSOR_DISPLAY_WIDTH_PX;
 
 export function CustomCursor() {
   const [activeFrame, setActiveFrame] = useState<CursorFrame>(1);
@@ -212,7 +231,12 @@ export function CustomCursor() {
       aria-hidden="true"
       className="custom-cursor"
       data-visible={isVisible}
-      style={{ x, y }}
+      style={{
+        height: CURSOR_DISPLAY_HEIGHT_PX,
+        width: CURSOR_DISPLAY_WIDTH_PX,
+        x,
+        y,
+      }}
     >
       {CURSOR_ASSETS.map((asset) => (
         <Image
@@ -221,11 +245,12 @@ export function CustomCursor() {
           className="custom-cursor__frame"
           data-active={activeFrame === asset.frame}
           draggable={false}
-          height={renderHeight(asset.height)}
+          height={asset.height}
           key={asset.frame}
           priority
           src={asset.src}
-          width={CURSOR_DISPLAY_WIDTH_PX}
+          unoptimized
+          width={SOURCE_WIDTH_PX}
         />
       ))}
     </motion.div>

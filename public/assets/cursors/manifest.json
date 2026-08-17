@@ -5,48 +5,48 @@
     "pageName": "Buttons",
     "retrievedAt": "2026-08-17",
     "licenseStatus": "Unverified community-file assets; confirm usage rights before public release.",
-    "exportProcessing": "Rasterized the exact Figma vector exports to transparent PNG and cropped each result to its 67x107 frame bounds."
+    "exportProcessing": "Uses the SVG frame exports directly. Each frame is centered in a fixed cursor canvas and rendered at 25% of its source dimensions."
   },
   "assets": [
     {
       "name": "Wii Cursor - 1 Frame",
       "figmaNodeId": "2206:8",
-      "png": "/assets/cursors/cursor-01.png",
-      "width": 67,
-      "height": 107,
-      "hasAlpha": true
+      "svg": "/assets/cursors/Wii Cursor - 1 Frame.svg",
+      "width": 85,
+      "height": 126,
+      "hasTransparency": true
     },
     {
       "name": "Wii Cursor - 2 Frame",
       "figmaNodeId": "2206:9",
-      "png": "/assets/cursors/cursor-02.png",
-      "width": 67,
-      "height": 107,
-      "hasAlpha": true
+      "svg": "/assets/cursors/Wii Cursor - 2 Frame.svg",
+      "width": 85,
+      "height": 119,
+      "hasTransparency": true
     },
     {
       "name": "Wii Cursor - 3 Frame",
       "figmaNodeId": "2206:10",
-      "png": "/assets/cursors/cursor-03.png",
-      "width": 67,
-      "height": 107,
-      "hasAlpha": true
+      "svg": "/assets/cursors/Wii Cursor - 3 Frame.svg",
+      "width": 85,
+      "height": 112,
+      "hasTransparency": true
     },
     {
       "name": "Wii Cursor - 4 Frame",
       "figmaNodeId": "2206:11",
-      "png": "/assets/cursors/cursor-04.png",
-      "width": 67,
-      "height": 107,
-      "hasAlpha": true
+      "svg": "/assets/cursors/Wii Cursor - 4 Frame.svg",
+      "width": 85,
+      "height": 112,
+      "hasTransparency": true
     },
     {
       "name": "Wii Cursor - 5 Frame",
       "figmaNodeId": "2206:12",
-      "png": "/assets/cursors/cursor-05.png",
-      "width": 67,
-      "height": 107,
-      "hasAlpha": true
+      "svg": "/assets/cursors/Wii Cursor - 5 Frame.svg",
+      "width": 85,
+      "height": 112,
+      "hasTransparency": true
     }
   ]
 }
