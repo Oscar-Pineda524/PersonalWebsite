@@ -5,43 +5,48 @@
     "pageName": "Buttons",
     "retrievedAt": "2026-08-17",
     "licenseStatus": "Unverified community-file assets; confirm usage rights before public release.",
-    "exportProcessing": "Constrained each Figma SVG export to its 67x107 frame viewBox because non-clipped child overflow was included by the exporter."
+    "exportProcessing": "Rasterized the exact Figma vector exports to transparent PNG and cropped each result to its 67x107 frame bounds."
   },
   "assets": [
     {
       "name": "Wii Cursor - 1 Frame",
       "figmaNodeId": "2206:8",
-      "svg": "/assets/cursors/cursor-01.svg",
+      "png": "/assets/cursors/cursor-01.png",
       "width": 67,
-      "height": 107
+      "height": 107,
+      "hasAlpha": true
     },
     {
       "name": "Wii Cursor - 2 Frame",
       "figmaNodeId": "2206:9",
-      "svg": "/assets/cursors/cursor-02.svg",
+      "png": "/assets/cursors/cursor-02.png",
       "width": 67,
-      "height": 107
+      "height": 107,
+      "hasAlpha": true
     },
     {
       "name": "Wii Cursor - 3 Frame",
       "figmaNodeId": "2206:10",
-      "svg": "/assets/cursors/cursor-03.svg",
+      "png": "/assets/cursors/cursor-03.png",
       "width": 67,
-      "height": 107
+      "height": 107,
+      "hasAlpha": true
     },
     {
       "name": "Wii Cursor - 4 Frame",
       "figmaNodeId": "2206:11",
-      "svg": "/assets/cursors/cursor-04.svg",
+      "png": "/assets/cursors/cursor-04.png",
       "width": 67,
-      "height": 107
+      "height": 107,
+      "hasAlpha": true
     },
     {
       "name": "Wii Cursor - 5 Frame",
       "figmaNodeId": "2206:12",
-      "svg": "/assets/cursors/cursor-05.svg",
+      "png": "/assets/cursors/cursor-05.png",
       "width": 67,
-      "height": 107
+      "height": 107,
+      "hasAlpha": true
     }
   ]
 }
