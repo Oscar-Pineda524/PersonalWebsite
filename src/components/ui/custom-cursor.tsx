@@ -30,11 +30,11 @@ export const CURSOR_HOTSPOT = {
 } as const;
 
 const CURSOR_ASSETS: readonly CursorAsset[] = [
-  { frame: 1, height: 107, src: "/assets/cursors/cursor-01.png" },
-  { frame: 2, height: 107, src: "/assets/cursors/cursor-02.png" },
-  { frame: 3, height: 107, src: "/assets/cursors/cursor-03.png" },
-  { frame: 4, height: 107, src: "/assets/cursors/cursor-04.png" },
-  { frame: 5, height: 107, src: "/assets/cursors/cursor-05.png" },
+  { frame: 1, height: 107, src: "/assets/cursors/cursor-01.svg" },
+  { frame: 2, height: 107, src: "/assets/cursors/cursor-02.svg" },
+  { frame: 3, height: 107, src: "/assets/cursors/cursor-03.svg" },
+  { frame: 4, height: 107, src: "/assets/cursors/cursor-04.svg" },
+  { frame: 5, height: 107, src: "/assets/cursors/cursor-05.svg" },
 ] as const;
 
 const renderHeight = (sourceHeight: number) =>
