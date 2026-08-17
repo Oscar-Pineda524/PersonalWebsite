@@ -777,6 +777,66 @@
   }
 }
 
+/*
+ * Frame-by-frame cursor animation. It is enabled only for precise pointing
+ * devices so touch and keyboard interactions retain their native behavior.
+ */
+.custom-cursor {
+  position: fixed;
+  z-index: 2147483647;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 68px;
+  height: 101px;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+}
+
+.custom-cursor[data-visible="true"] {
+  opacity: 1;
+}
+
+.custom-cursor__frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 68px;
+  max-width: none;
+  height: auto;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.custom-cursor__frame[data-active="true"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html.custom-cursor-active,
+  html.custom-cursor-active * {
+    cursor: none !important;
+  }
+
+  .custom-cursor {
+    display: block;
+  }
+}
+
+@media (forced-colors: active) {
+  html.custom-cursor-active,
+  html.custom-cursor-active * {
+    cursor: auto !important;
+  }
+
+  .custom-cursor {
+    display: none;
+  }
+}
+
 /* Primary channel menu */
 .portfolio-page {
   min-height: 100svh;

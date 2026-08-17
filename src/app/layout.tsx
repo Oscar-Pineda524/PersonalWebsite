@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 
+import { CustomCursor } from "@/components/ui/custom-cursor";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -60,6 +62,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           Skip to main content
         </a>
         {children}
+        <CustomCursor />
       </body>
     </html>
   );
