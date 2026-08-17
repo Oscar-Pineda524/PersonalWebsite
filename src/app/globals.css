@@ -788,7 +788,7 @@
   left: 0;
   display: none;
   width: 68px;
-  height: 101px;
+  height: 100.8px;
   opacity: 0;
   pointer-events: none;
   user-select: none;
@@ -801,12 +801,13 @@
 
 .custom-cursor__frame {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   width: 68px;
   max-width: none;
   height: auto;
   opacity: 0;
+  transform: translate(-50%, -50%);
   visibility: hidden;
 }
 

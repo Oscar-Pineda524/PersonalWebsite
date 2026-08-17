@@ -17,19 +17,24 @@ export const CURSOR_FRAME_DURATION_MS = 40;
 
 /**
  * Cursor display size and hotspot, measured in rendered CSS pixels.
- * The hotspot matches the fingertip shared by all five exported SVGs.
+ * All differently sized frames are centered inside this fixed canvas.
  */
 export const CURSOR_DISPLAY_WIDTH_PX = 68;
-export const CURSOR_HOTSPOT = { x: 18.4, y: 4 } as const;
-
 const SOURCE_WIDTH_PX = 85;
+const MAX_SOURCE_HEIGHT_PX = 126;
+export const CURSOR_DISPLAY_HEIGHT_PX =
+  (MAX_SOURCE_HEIGHT_PX / SOURCE_WIDTH_PX) * CURSOR_DISPLAY_WIDTH_PX;
+export const CURSOR_HOTSPOT = {
+  x: CURSOR_DISPLAY_WIDTH_PX / 2,
+  y: CURSOR_DISPLAY_HEIGHT_PX / 2,
+} as const;
 
 const CURSOR_ASSETS: readonly CursorAsset[] = [
-  { frame: 1, height: 126, src: "/assets/cursors/cursor-01.svg" },
-  { frame: 2, height: 118.431, src: "/assets/cursors/cursor-02.svg" },
-  { frame: 3, height: 111.431, src: "/assets/cursors/cursor-03.svg" },
-  { frame: 4, height: 101.931, src: "/assets/cursors/cursor-04.svg" },
-  { frame: 5, height: 96.023, src: "/assets/cursors/cursor-05.svg" },
+  { frame: 1, height: 126, src: "/assets/cursors/cursor-01.png" },
+  { frame: 2, height: 119, src: "/assets/cursors/cursor-02.png" },
+  { frame: 3, height: 112, src: "/assets/cursors/cursor-03.png" },
+  { frame: 4, height: 102, src: "/assets/cursors/cursor-04.png" },
+  { frame: 5, height: 97, src: "/assets/cursors/cursor-05.png" },
 ] as const;
 
 const renderHeight = (sourceHeight: number) =>
