@@ -4,56 +4,44 @@
     "pageNodeId": "16:6",
     "pageName": "Buttons",
     "retrievedAt": "2026-08-17",
-    "licenseStatus": "Unverified community-file assets; confirm usage rights before public release."
+    "licenseStatus": "Unverified community-file assets; confirm usage rights before public release.",
+    "exportProcessing": "Cropped each Figma export to its 67x107 frame bounds because non-clipped child overflow was included by the exporter."
   },
   "assets": [
     {
-      "name": "cursor-full",
-      "figmaNodeId": "19:120",
-      "png": "/assets/cursors/cursor-full.png",
-      "svg": "/assets/cursors/cursor-full.svg",
-      "width": 228,
-      "height": 362
-    },
-    {
-      "name": "cursor-01",
-      "figmaNodeId": "2202:159",
+      "name": "Wii Cursor - 1 Frame",
+      "figmaNodeId": "2206:8",
       "png": "/assets/cursors/cursor-01.png",
-      "svg": "/assets/cursors/cursor-01.svg",
-      "width": 85,
-      "height": 126
+      "width": 67,
+      "height": 107
     },
     {
-      "name": "cursor-02",
-      "figmaNodeId": "2203:161",
+      "name": "Wii Cursor - 2 Frame",
+      "figmaNodeId": "2206:9",
       "png": "/assets/cursors/cursor-02.png",
-      "svg": "/assets/cursors/cursor-02.svg",
-      "width": 85,
-      "height": 119
+      "width": 67,
+      "height": 107
     },
     {
-      "name": "cursor-03",
-      "figmaNodeId": "2203:163",
+      "name": "Wii Cursor - 3 Frame",
+      "figmaNodeId": "2206:10",
       "png": "/assets/cursors/cursor-03.png",
-      "svg": "/assets/cursors/cursor-03.svg",
-      "width": 85,
-      "height": 112
+      "width": 67,
+      "height": 107
     },
     {
-      "name": "cursor-04",
-      "figmaNodeId": "2203:165",
+      "name": "Wii Cursor - 4 Frame",
+      "figmaNodeId": "2206:11",
       "png": "/assets/cursors/cursor-04.png",
-      "svg": "/assets/cursors/cursor-04.svg",
-      "width": 85,
-      "height": 102
+      "width": 67,
+      "height": 107
     },
     {
-      "name": "cursor-05",
-      "figmaNodeId": "2203:167",
+      "name": "Wii Cursor - 5 Frame",
+      "figmaNodeId": "2206:12",
       "png": "/assets/cursors/cursor-05.png",
-      "svg": "/assets/cursors/cursor-05.svg",
-      "width": 85,
-      "height": 97
+      "width": 67,
+      "height": 107
     }
   ]
 }

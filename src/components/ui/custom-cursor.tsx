@@ -19,9 +19,9 @@ export const CURSOR_FRAME_DURATION_MS = 40;
  * Cursor display size and hotspot, measured in rendered CSS pixels.
  * All differently sized frames are centered inside this fixed canvas.
  */
-export const CURSOR_DISPLAY_WIDTH_PX = 68;
-const SOURCE_WIDTH_PX = 85;
-const MAX_SOURCE_HEIGHT_PX = 126;
+export const CURSOR_DISPLAY_WIDTH_PX = 34;
+const SOURCE_WIDTH_PX = 67;
+const MAX_SOURCE_HEIGHT_PX = 107;
 export const CURSOR_DISPLAY_HEIGHT_PX =
   (MAX_SOURCE_HEIGHT_PX / SOURCE_WIDTH_PX) * CURSOR_DISPLAY_WIDTH_PX;
 export const CURSOR_HOTSPOT = {
@@ -30,11 +30,11 @@ export const CURSOR_HOTSPOT = {
 } as const;
 
 const CURSOR_ASSETS: readonly CursorAsset[] = [
-  { frame: 1, height: 126, src: "/assets/cursors/cursor-01.png" },
-  { frame: 2, height: 119, src: "/assets/cursors/cursor-02.png" },
-  { frame: 3, height: 112, src: "/assets/cursors/cursor-03.png" },
-  { frame: 4, height: 102, src: "/assets/cursors/cursor-04.png" },
-  { frame: 5, height: 97, src: "/assets/cursors/cursor-05.png" },
+  { frame: 1, height: 107, src: "/assets/cursors/cursor-01.png" },
+  { frame: 2, height: 107, src: "/assets/cursors/cursor-02.png" },
+  { frame: 3, height: 107, src: "/assets/cursors/cursor-03.png" },
+  { frame: 4, height: 107, src: "/assets/cursors/cursor-04.png" },
+  { frame: 5, height: 107, src: "/assets/cursors/cursor-05.png" },
 ] as const;
 
 const renderHeight = (sourceHeight: number) =>
