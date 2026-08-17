@@ -1,0 +1,59 @@
+{
+  "source": {
+    "fileKey": "cifQBp5P9JRwRM2bCNWtCO",
+    "pageNodeId": "16:6",
+    "pageName": "Buttons",
+    "retrievedAt": "2026-08-17",
+    "licenseStatus": "Unverified community-file assets; confirm usage rights before public release."
+  },
+  "assets": [
+    {
+      "name": "cursor-full",
+      "figmaNodeId": "19:120",
+      "png": "/assets/cursors/cursor-full.png",
+      "svg": "/assets/cursors/cursor-full.svg",
+      "width": 228,
+      "height": 362
+    },
+    {
+      "name": "cursor-01",
+      "figmaNodeId": "2202:159",
+      "png": "/assets/cursors/cursor-01.png",
+      "svg": "/assets/cursors/cursor-01.svg",
+      "width": 85,
+      "height": 126
+    },
+    {
+      "name": "cursor-02",
+      "figmaNodeId": "2203:161",
+      "png": "/assets/cursors/cursor-02.png",
+      "svg": "/assets/cursors/cursor-02.svg",
+      "width": 85,
+      "height": 119
+    },
+    {
+      "name": "cursor-03",
+      "figmaNodeId": "2203:163",
+      "png": "/assets/cursors/cursor-03.png",
+      "svg": "/assets/cursors/cursor-03.svg",
+      "width": 85,
+      "height": 112
+    },
+    {
+      "name": "cursor-04",
+      "figmaNodeId": "2203:165",
+      "png": "/assets/cursors/cursor-04.png",
+      "svg": "/assets/cursors/cursor-04.svg",
+      "width": 85,
+      "height": 102
+    },
+    {
+      "name": "cursor-05",
+      "figmaNodeId": "2203:167",
+      "png": "/assets/cursors/cursor-05.png",
+      "svg": "/assets/cursors/cursor-05.svg",
+      "width": 85,
+      "height": 97
+    }
+  ]
+}
