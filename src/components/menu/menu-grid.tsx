@@ -57,6 +57,7 @@ export function MenuGrid({
               subtitle={channel.subtitle}
               icon={channelIcons[channel.icon]}
               image={channel.image}
+              avatar={channel.avatar}
               disabled={channel.disabled}
               featured={channel.featured}
               selected={channel.slug === selectedChannel}

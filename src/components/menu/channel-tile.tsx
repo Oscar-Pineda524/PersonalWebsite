@@ -15,6 +15,7 @@ interface ChannelTileProps {
   icon: LucideIcon;
   onSelect: () => void;
   image?: ChannelTileImage;
+  avatar?: ChannelTileImage;
   disabled?: boolean;
   featured?: boolean;
   selected?: boolean;
@@ -26,6 +27,7 @@ export function ChannelTile({
   icon: Icon,
   onSelect,
   image,
+  avatar,
   disabled = false,
   featured = false,
   selected = false,
@@ -72,7 +74,15 @@ export function ChannelTile({
 
       <span className="channel-tile__topline">
         <span className="channel-tile__icon" aria-hidden="true">
-          <Icon strokeWidth={1.8} />
+          {avatar ? (
+            <img
+              src={avatar.src}
+              alt={avatar.alt}
+              style={{ width: "100%", height: "100%", objectFit: "contain" }}
+            />
+          ) : (
+            <Icon strokeWidth={1.8} />
+          )}
         </span>
         {featured ? (
           <span className="channel-tile__badge">Featured</span>

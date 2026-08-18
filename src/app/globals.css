@@ -1164,6 +1164,7 @@
   background: rgb(255 255 255 / 0.72);
   box-shadow: var(--ds-shadow-xs);
   color: var(--ds-color-accent-hover);
+  overflow: hidden;
 }
 
 .channel-tile__icon svg {

@@ -19,4 +19,8 @@ export interface MenuChannel {
     src: string;
     alt: string;
   };
+  avatar?: {
+    src: string;
+    alt: string;
+  };
 }

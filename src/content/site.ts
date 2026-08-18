@@ -7,6 +7,10 @@ export const menuChannels = [
     subtitle: "The person behind the code",
     icon: "about",
     slot: 1,
+    avatar: {
+      src: "/assets/mii/Oscar_custom_render_2026-08-18T05_54_32.625Z-ezgif.com-crop.gif",
+      alt: "Oscar's Mii avatar",
+    },
   },
   {
     slug: "projects",
