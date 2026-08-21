@@ -34,7 +34,7 @@ export function MenuGrid({
   selectedChannel,
   onSelect,
 }: MenuGridProps) {
-  const slots = Array.from({ length: 15 }, (_, index) => {
+  const slots = Array.from({ length: 9 }, (_, index) => {
     const slot = index + 1;
 
     return {

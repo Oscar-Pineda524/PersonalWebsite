@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface PortfolioHeaderProps {
   name: string;
   title: string;
@@ -10,8 +12,13 @@ export function PortfolioHeader({
   return (
     <header className="portfolio-header">
       <div className="portfolio-header__identity">
-        <span className="portfolio-mark" aria-hidden="true">
-          <span>OS</span>
+        <span className="portfolio-mark">
+          <Image
+            src="/assets/pictures/profilepic.png"
+            alt={`${name} profile photo`}
+            width={200}
+            height={200}
+          />
         </span>
         <div>
           <p className="portfolio-header__name">{name}</p>
