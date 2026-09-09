@@ -23,6 +23,7 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "daisyui": "^5.7.22",
     "eslint": "latest",
     "eslint-config-next": "latest",
     "tailwindcss": "latest",

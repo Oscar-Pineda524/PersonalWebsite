@@ -4,12 +4,15 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 
+import type { ChannelSlug } from "@/types/portfolio";
+
 interface ChannelTileImage {
   src: string;
   alt: string;
 }
 
 interface ChannelTileProps {
+  slug: ChannelSlug;
   title: string;
   subtitle: string;
   icon: LucideIcon;
@@ -22,6 +25,7 @@ interface ChannelTileProps {
 }
 
 export function ChannelTile({
+  slug,
   title,
   subtitle,
   icon: Icon,
@@ -38,10 +42,15 @@ export function ChannelTile({
     <motion.button
       type="button"
       className="channel-tile"
+      data-channel-slug={slug}
       data-featured={featured || undefined}
       data-selected={selected || undefined}
       disabled={disabled}
+      layoutId={
+        shouldReduceMotion ? undefined : `portfolio-channel-${slug}`
+      }
       aria-label={`${title}. ${subtitle}`}
+      aria-controls={disabled ? undefined : "expanded-channel"}
       aria-pressed={selected}
       onClick={onSelect}
       whileHover={
@@ -54,6 +63,12 @@ export function ChannelTile({
           ? undefined
           : { scale: 0.975, transition: { duration: 0.08 } }
       }
+      transition={{
+        layout: {
+          duration: shouldReduceMotion ? 0 : 0.38,
+          ease: [0.2, 0.8, 0.2, 1],
+        },
+      }}
     >
       {image ? (
         <span className="channel-tile__image" aria-hidden={image.alt === ""}>
@@ -75,9 +90,12 @@ export function ChannelTile({
       <span className="channel-tile__topline">
         <span className="channel-tile__icon" aria-hidden="true">
           {avatar ? (
-            <img
+            <Image
               src={avatar.src}
               alt={avatar.alt}
+              width={64}
+              height={64}
+              unoptimized
               style={{ width: "100%", height: "100%", objectFit: "contain" }}
             />
           ) : (

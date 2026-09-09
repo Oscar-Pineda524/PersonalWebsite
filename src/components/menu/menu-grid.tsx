@@ -1,25 +1,9 @@
 "use client";
 
-import {
-  BriefcaseBusiness,
-  CodeXml,
-  FileText,
-  Send,
-  UserRound,
-  type LucideIcon,
-} from "lucide-react";
-
+import { channelIcons } from "@/components/menu/channel-icons";
 import { ChannelTile } from "@/components/menu/channel-tile";
-import type { ChannelIconName, MenuChannel } from "@/types/menu";
+import type { MenuChannel } from "@/types/menu";
 import type { ChannelSlug } from "@/types/portfolio";
-
-const channelIcons: Record<ChannelIconName, LucideIcon> = {
-  about: UserRound,
-  projects: CodeXml,
-  experience: BriefcaseBusiness,
-  resume: FileText,
-  contact: Send,
-};
 
 interface MenuGridProps {
   channels: readonly MenuChannel[];
@@ -53,6 +37,7 @@ export function MenuGrid({
             key={channel.slug}
           >
             <ChannelTile
+              slug={channel.slug}
               title={channel.title}
               subtitle={channel.subtitle}
               icon={channelIcons[channel.icon]}

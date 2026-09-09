@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 
+import { AmbientBackground } from "@/components/ui/ambient-background";
 import { CustomCursor } from "@/components/ui/custom-cursor";
 
 import "./globals.css";
@@ -56,11 +57,12 @@ type RootLayoutProps = Readonly<{
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="portfolio">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <a className="skip-link" href="#main-content">
           Skip to main content
         </a>
+        <AmbientBackground />
         {children}
         <CustomCursor />
       </body>
